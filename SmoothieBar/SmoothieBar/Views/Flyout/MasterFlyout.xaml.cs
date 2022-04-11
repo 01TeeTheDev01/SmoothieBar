@@ -35,7 +35,8 @@ namespace SmoothieBar.Views
                 MenuItems = new ObservableCollection<MasterFlyoutMenuItem>(new[]
                 {
                     new MasterFlyoutMenuItem { Id = 0, Title = "Home", IconSource="home_48px.png", TargetType = typeof(Login) },
-                    new MasterFlyoutMenuItem { Id = 1, Title = "Search" , IconSource = "search_48px.png", TargetType = typeof(MainPage)}
+                    new MasterFlyoutMenuItem { Id = 1, Title = "Search" , IconSource = "search_48px.png", TargetType = typeof(MainPage)},
+                    new MasterFlyoutMenuItem { Id = 1, Title = "Motivation" , IconSource = "applause_48px.png", TargetType = typeof(MessagesPage)}
                 });
             }
 

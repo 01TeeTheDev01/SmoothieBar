@@ -10,7 +10,7 @@ namespace SmoothieBar
         {
             InitializeComponent();
 
-            MainPage = new Views.Master();
+            MainPage = new Views.Splash();
         }
 
         protected override void OnStart()

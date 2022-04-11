@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmoothieBar.Views.Splash"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="10">
+            <Image Source="logo.png" x:Name="imgLogo" HeightRequest="100" WidthRequest="100" Margin="0,5" HorizontalOptions="Center"/>
+            <Label Text="Loading..." FontSize="15" TextColor="DarkGray" Margin="5" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
