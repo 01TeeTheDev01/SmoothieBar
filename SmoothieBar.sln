@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmoothieBar.Android", "SmoothieBar\SmoothieBar.Android\SmoothieBar.Android.csproj", "{A3E6F5D3-186B-4536-BE03-2AC463A8D563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmoothieBar", "SmoothieBar\SmoothieBar\SmoothieBar.csproj", "{4731ABF7-7845-44CC-826C-1D1C74E7AE21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3E6F5D3-186B-4536-BE03-2AC463A8D563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E6F5D3-186B-4536-BE03-2AC463A8D563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E6F5D3-186B-4536-BE03-2AC463A8D563}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3E6F5D3-186B-4536-BE03-2AC463A8D563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E6F5D3-186B-4536-BE03-2AC463A8D563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E6F5D3-186B-4536-BE03-2AC463A8D563}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4731ABF7-7845-44CC-826C-1D1C74E7AE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4731ABF7-7845-44CC-826C-1D1C74E7AE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4731ABF7-7845-44CC-826C-1D1C74E7AE21}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4731ABF7-7845-44CC-826C-1D1C74E7AE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4731ABF7-7845-44CC-826C-1D1C74E7AE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4731ABF7-7845-44CC-826C-1D1C74E7AE21}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DFDFC60-5AB2-4940-ABAE-B57034C3F47C}
+	EndGlobalSection
+EndGlobal

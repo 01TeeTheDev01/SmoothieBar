@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmoothieBar.MainPage"
+             BackgroundImageSource="dark_mood_food_raspberry_blackberry.jpg">
+
+    <Grid BackgroundColor="Black">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="2" Opacity=".35" Aspect="AspectFill" VerticalOptions="FillAndExpand" Source="dark_mood_food_raspberry_blackberry"/>
+        
+        <Frame Grid.Row="0" BackgroundColor="Black">
+            <!--<Label HorizontalTextAlignment="Center" TextColor="White" Padding="15" Text="SMOOTHIE BAR"  FontSize="30" FontAttributes="Bold" HorizontalOptions="Fill"/>--> 
+        </Frame>
+
+        <StackLayout Padding="10" Orientation="Horizontal" Grid.Row="1">
+            <Entry Placeholder="Search fruit..." 
+                   PlaceholderColor="LightGray" 
+                   TextColor="OrangeRed" 
+                   HorizontalOptions="FillAndExpand" 
+                   Keyboard="Default" 
+                   x:Name="FruitSearch" 
+                   TextChanged="FruitSearch_TextChanged"/>
+
+            <!--<Button BackgroundColor="Green" TextColor="White" CornerRadius="6" HeightRequest="20" Text="Reload data" HorizontalOptions="End" WidthRequest="130" x:Name="SearchBtn" Clicked="SearchBtn_Clicked"/>-->
+        </StackLayout>
+
+        <ListView Margin="3,5,3,10" Grid.Row="2" 
+                  HorizontalOptions="EndAndExpand" 
+                  x:Name="FruitListView" 
+                  ItemSelected="FruitListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="Center">
+                            <Label x:Name="FruitListLabel" 
+                                   VerticalOptions="End" 
+                                   VerticalTextAlignment="Start" 
+                                   FontSize="18" Text="{Binding FruitName}" 
+                                   TextColor="OrangeRed"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Grid.Row="3">
+
+            <Image x:Name="FruitPicBox" VerticalOptions="CenterAndExpand" Aspect="AspectFill"/>
+
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

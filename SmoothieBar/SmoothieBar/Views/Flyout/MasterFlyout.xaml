@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmoothieBar.Views.MasterFlyout"
+             Title="Flyout"
+             BackgroundColor="Black"
+             IconImageSource="menu_48px.png">
+  <StackLayout>
+      
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+        
+      <ListView.Header>
+        <Grid BackgroundColor="Black">
+            
+          <Grid.ColumnDefinitions>
+             <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+            
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+          </Grid.RowDefinitions>
+
+                    <Image Source="MenuImage" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="150" Aspect="AspectFill"/>
+
+                    <Label Grid.Column="0" Grid.Row="2" Text="MAIN MENU" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                </Grid>
+      </ListView.Header>
+        
+      <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        <Grid Padding="15,10" HorizontalOptions="FillAndExpand">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Aspect="AspectFit" WidthRequest="15" HeightRequest="32" VerticalOptions="FillAndExpand" Source="{Binding IconSource}"/>
+                            <Label Margin="2,0,0,0" Grid.Column="1" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="15" TextColor="OrangeRed"/>
+                            
+                        </Grid>
+                    </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+        
+    </ListView>
+  </StackLayout>
+</ContentPage>
