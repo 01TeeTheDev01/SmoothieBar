@@ -30,6 +30,8 @@ namespace SmoothieBar.Views
 
             await imgLogo.FadeTo(1, 6500, Easing.CubicInOut);
 
+            await Task.Delay(3000);
+
             Application.Current.MainPage = new Master();
         }
     }

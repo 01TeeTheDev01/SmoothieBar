@@ -40,6 +40,8 @@ namespace SmoothieBar.Views
                 });
             }
 
+
+
             #region INotifyPropertyChanged Implementation
             public event PropertyChangedEventHandler PropertyChanged;
             void OnPropertyChanged([CallerMemberName] string propertyName = "")

@@ -46,6 +46,9 @@
     <None Update="Views\Master.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\MessagesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\Splash.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
