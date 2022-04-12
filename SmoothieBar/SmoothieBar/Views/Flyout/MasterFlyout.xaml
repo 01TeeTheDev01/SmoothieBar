@@ -1,40 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:imgCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="SmoothieBar.Views.MasterFlyout"
              Title="Flyout"
-             BackgroundColor="Black"
-             IconImageSource="menu_48px.png">
+             BackgroundColor="Black">
   <StackLayout>
-      
-    <ListView x:Name="MenuItemsListView"
+        
+      <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
-              HasUnevenRows="true"
+              HasUnevenRows="True"
               ItemsSource="{Binding MenuItems}">
-        
-      <ListView.Header>
-        <Grid BackgroundColor="Black">
             
-          <Grid.ColumnDefinitions>
-             <ColumnDefinition Width="*"/>
-          </Grid.ColumnDefinitions>
-            
-          <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-          </Grid.RowDefinitions>
 
-                    <Image Source="MenuImage" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="150" Aspect="AspectFill"/>
+            <ListView.Header>
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                    <Label Grid.Column="0" Grid.Row="2" Text="MAIN MENU" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!--Flyout menu image-->
+                    <Image Source="MenuImage"
+                           Grid.Row="0" 
+                           HeightRequest="165" 
+                           Aspect="AspectFill" 
+                           Opacity=".75"/>
+
+                    <!--Flyout main menu title, image and user-->
+                    <Grid Grid.Row="1" >
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Flyout menu title-->
+                        <Label  Grid.Column="0"
+                                Margin="20,0,0,0" 
+                                Text="MAIN MENU" 
+                                TextColor="White" 
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start" 
+                                VerticalOptions="Center"/>
+
+                        <!--Flyout menu user image-->
+                        <imgCircle:CircleImage  Source="user_48px" 
+                                                Aspect="AspectFill" 
+                                                Grid.Column="1"
+                                                HorizontalOptions="End"
+                                                VerticalOptions="Center"
+                                                WidthRequest="42"
+                                                HeightRequest="42"/>
+
+                        <!--Flyout menu username-->
+                        <Label  Text="User" 
+                                TextColor="White"  
+                                FontSize="18"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"
+                                Grid.Column="2"
+                                Margin="5,0,20,0"/>
+                    </Grid>
                 </Grid>
-      </ListView.Header>
-        
-      <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
                         <Grid Padding="15,10" HorizontalOptions="FillAndExpand">
 
                             <Grid.ColumnDefinitions>
@@ -42,14 +82,32 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Grid.Column="0" Aspect="AspectFit" WidthRequest="15" HeightRequest="32" VerticalOptions="FillAndExpand" Source="{Binding IconSource}"/>
-                            <Label Margin="2,0,0,0" Grid.Column="1" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="15" TextColor="OrangeRed"/>
-                            
+                            <!--Flyout sub-menu image-->
+                            <Image Grid.Column="0" 
+                                   Aspect="AspectFit" 
+                                   WidthRequest="15" 
+                                   HeightRequest="32" 
+                                   VerticalOptions="FillAndExpand" 
+                                   Source="{Binding IconSource}"/>
+
+                            <!--Flyout sub-menu title-->
+                            <Label Margin="2,0,0,0" 
+                                   Grid.Column="1" 
+                                   VerticalOptions="FillAndExpand" 
+                                   VerticalTextAlignment="Center" 
+                                   Text="{Binding Title}" 
+                                   FontSize="15" 
+                                   TextColor="OrangeRed"/>
+
                         </Grid>
                     </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+          
+        </ListView>
+
+
         
-    </ListView>
-  </StackLayout>
+
+    </StackLayout>
 </ContentPage>

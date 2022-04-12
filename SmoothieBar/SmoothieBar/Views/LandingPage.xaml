@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:calendar="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar" 
+             
+             x:Class="SmoothieBar.Views.LandingPage"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0"  Source="dark_mood_food_raspberry_blackberry" 
+                       Aspect="AspectFill" Opacity=".2"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+
+            <Grid x:Name="LandingGrid" Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label  Text="Let's have a smoothie a day..."
+                        FontSize="Title"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="OrangeRed"
+                        Grid.Row="0"/>
+
+                <calendar:Calendar Grid.Row="1" 
+                                   Margin="2"
+                                   ArrowsColor="OrangeRed"
+                                   DaysTitleColor="OrangeRed"
+                                   DeselectedDayTextColor="Gray"
+                                   MonthLabelColor="OrangeRed"
+                                   SelectedDateColor="OrangeRed"
+                                   SelectedDayTextColor="White"
+                                   TodayFillColor="OrangeRed"
+                                   TodayTextColor="White"
+                                   YearLabelColor="OrangeRed"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   Events="{Binding Events}"
+                                   Culture="{Binding Culture}">
+
+                    <calendar:Calendar.EventTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="15,0,0,0">
+
+                                <Label  Text="{Binding RecipeName}"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium" />
+
+                                <Label  Text="{Binding RecipeDescription}"
+                                        FontSize="Small"
+                                        LineBreakMode="WordWrap" />
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </calendar:Calendar.EventTemplate>
+
+                    <!--<calendar:Calendar.EmptyTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label TextColor="OrangeRed" Text="NO EVENTS FOR THE SELECTED DATE" 
+                                       HorizontalTextAlignment="Center" Margin="0,5,0,5" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </calendar:Calendar.EmptyTemplate>-->
+                            
+                </calendar:Calendar>
+
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <ListView x:Name="RecipesListView" Grid.Row="0" BackgroundColor="Black" Margin="3" ItemTapped="RecipesListView_ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Grid.Row="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <StackLayout Orientation="Horizontal" Grid.Row="0">
+
+                                            <Image  Source="logo.png" 
+                                                        WidthRequest="30" 
+                                                        HeightRequest="30" 
+                                                        Aspect="AspectFit"/>
+
+                                            <Label  Margin="3,0,0,0"  
+                                                        TextColor="OrangeRed" Text="{Binding RecipeName}"
+                                                        VerticalTextAlignment="Center"/>
+
+                                        </StackLayout>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+
+            </Grid>
+            
+           
+        </Grid>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

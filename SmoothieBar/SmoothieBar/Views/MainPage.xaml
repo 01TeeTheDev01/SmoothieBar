@@ -13,7 +13,9 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Row="2" Opacity=".35" Aspect="AspectFill" VerticalOptions="FillAndExpand" Source="dark_mood_food_raspberry_blackberry"/>
+        <Image Grid.Row="2" Opacity=".2" Aspect="AspectFill" 
+               VerticalOptions="FillAndExpand" 
+               Source="dark_mood_food_raspberry_blackberry"/>
         
         <Frame Grid.Row="0" BackgroundColor="Black">
             <!--<Label HorizontalTextAlignment="Center" TextColor="White" Padding="15" Text="SMOOTHIE BAR"  FontSize="30" FontAttributes="Bold" HorizontalOptions="Fill"/>--> 

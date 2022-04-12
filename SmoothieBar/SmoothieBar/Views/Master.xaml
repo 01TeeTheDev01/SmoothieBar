@@ -6,11 +6,13 @@
   <FlyoutPage.Flyout>
     <pages:MasterFlyout x:Name="FlyoutPage" />
   </FlyoutPage.Flyout>
-  <FlyoutPage.Detail>
-    <NavigationPage>
-      <x:Arguments>
-        <pages:Login />
-      </x:Arguments>
-    </NavigationPage>
-  </FlyoutPage.Detail>
+  
+    <FlyoutPage.Detail>
+
+        <NavigationPage>
+            <x:Arguments>
+                <pages:LandingPage />
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
 </FlyoutPage>
